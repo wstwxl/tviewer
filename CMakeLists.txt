@@ -6,6 +6,9 @@ project("lib${LIB_NAME}")
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/" ${CMAKE_MODULE_PATH})
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# ===================================================================
+# MODIFICATION: Change C++ standard from 11 to 14 for PCL 1.10+
+# ===================================================================
 set(CMAKE_CXX_STANDARD 14)
 
 # Set build type to Release if not specified by user
@@ -108,7 +111,10 @@ target_include_directories(${LIB_NAME}
   PUBLIC
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
 )
-set_target_properties(${LIB_NAME} PROPERTIES CXX_STANDARD 11)
+# ===================================================================
+# MODIFICATION: Change C++ standard from 11 to 14 for PCL 1.10+
+# ===================================================================
+set_target_properties(${LIB_NAME} PROPERTIES CXX_STANDARD 14)
 target_compile_options(${LIB_NAME} PUBLIC ${TVIEWER_OPTIONS})
 target_compile_definitions(${LIB_NAME} PUBLIC ${TVIEWER_DEFINITIONS})
 
