@@ -6,7 +6,7 @@ project("lib${LIB_NAME}")
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/" ${CMAKE_MODULE_PATH})
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 # Set build type to Release if not specified by user
 if(NOT CMAKE_BUILD_TYPE)
